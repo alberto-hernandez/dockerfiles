@@ -6,7 +6,7 @@
 
 # Pull base image.
 FROM ubuntu
-MAINTAINER Alberto Hernandez "alberto.hernandez@itdev.rocks
+MAINTAINER Alberto Hernandez "alberto.hernandez@itdev.rocks"
 
 ENV http_proxy $http_proxy
 ENV https_proxy $https_proxy

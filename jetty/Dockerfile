@@ -1,5 +1,5 @@
 FROM itdev-rocks/java8
-MAINTAINER Alberto Hernandez "alberto.hernandez@itdev.rocks
+MAINTAINER Alberto Hernandez "alberto.hernandez@itdev.rocks"
 
 # Download and install jetty
 ENV JETTY_VERSION 9.3.12

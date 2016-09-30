@@ -1,6 +1,6 @@
 # Pull base image.
 FROM ubuntu/itdev-rocks
-MAINTAINER Alberto Hernandez "alberto.hernandez@itdev.rocks
+MAINTAINER Alberto Hernandez "alberto.hernandez@itdev.rocks"
 
 #
 # Oracle Java 8 Dockerfile
