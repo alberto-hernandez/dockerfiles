@@ -1,6 +1,14 @@
 maven-plugin
-git
+
+subversion
+mapdb-api
+ssh-credentials
 credentials
+scm-api
+workflow-scm-step
+
+git
+git-client
 ssh-slaves
 durable-task
 
@@ -9,11 +17,7 @@ javadoc
 mailer
 
 docker-plugin
-ssh-credentials
-git-client
 matrix-project
-scm-api
-workflow-scm-step
 workflow-step-api
 structs
 script-security
