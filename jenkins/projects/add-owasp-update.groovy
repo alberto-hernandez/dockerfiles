@@ -1,13 +1,22 @@
 import jenkins.model.*
 
-def jobName = "OWASP Dependency-Check NVD Update"
+def jobName = "OWASP Dependency-Check NVD Update2"
 
 def configXML = "<?xml version='1.0' encoding='UTF-8'?> \
 <project> \
   <actions/> \
   <description></description> \
   <keepDependencies>false</keepDependencies> \
-  <properties/> \
+  <properties>\
+    <jenkins.model.BuildDiscarderProperty>\
+      <strategy class='hudson.tasks.LogRotator'>\
+        <daysToKeep>-1</daysToKeep>\
+        <numToKeep>1</numToKeep>\
+        <artifactDaysToKeep>-1</artifactDaysToKeep>\
+        <artifactNumToKeep>-1</artifactNumToKeep> \
+      </strategy>\
+    </jenkins.model.BuildDiscarderProperty>\
+  </properties>\
   <scm class='hudson.scm.NullSCM'/> \
   <canRoam>true</canRoam> \
   <disabled>false</disabled>  \
