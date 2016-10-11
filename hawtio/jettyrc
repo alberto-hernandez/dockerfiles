@@ -1,0 +1,1 @@
+export JAVA_OPTIONS='-Dhawtio.authenticationEnabled=true -Dhawtio.realm=hawtio -Dhawtio.role=admin -Dhawtio.rolePrincipalClasses='
