@@ -1,4 +1,5 @@
 FROM java8/jetty9
+MAINTAINER Alberto Hernandez "alberto.hernandez@itdev.rocks"
 
 ENV HAWTIO_VERSION 1.4.65
 ENV HAWTIO_WAR hawtio-default-${HAWTIO_VERSION}.war
