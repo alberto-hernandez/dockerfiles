@@ -2,11 +2,13 @@ FROM itdev-rocks/java8
 MAINTAINER Alberto Hernandez "alberto.hernandez@itdev.rocks"
 
 # Download and install jetty
-ENV JETTY_VERSION 9.3.12
-ENV RELEASE_DATE v20160915
+ENV JETTY_VERSION 9.4.6
+ENV RELEASE_DATE v20170531
 ENV URL_BASE http://repo1.maven.org/maven2/org/eclipse/jetty/jetty-distribution
 
-RUN wget ${URL_BASE}/${JETTY_VERSION}.${RELEASE_DATE}/jetty-distribution-${JETTY_VERSION}.${RELEASE_DATE}.tar.gz && \
+
+RUN . /etc/profile.d/proxy.sh && \
+	wget ${URL_BASE}/${JETTY_VERSION}.${RELEASE_DATE}/jetty-distribution-${JETTY_VERSION}.${RELEASE_DATE}.tar.gz && \
     tar -xzvf jetty-distribution-${JETTY_VERSION}.${RELEASE_DATE}.tar.gz && \
     rm -rf jetty-distribution-${JETTY_VERSION}.${RELEASE_DATE}.tar.gz && \
     mv jetty-distribution-${JETTY_VERSION}.${RELEASE_DATE}/ /opt/jetty
