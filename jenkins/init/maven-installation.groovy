@@ -9,7 +9,7 @@ def mavenExtension = jenkins.model.Jenkins.instance.getExtensionList(hudson.task
 def proplist = new DescribableList<ToolProperty<?>, ToolPropertyDescriptor>()
 def isp = new InstallSourceProperty()
 
-isp.installers.add(new hudson.tasks.Maven.MavenInstaller("3.3.9"))
+isp.installers.add(new hudson.tasks.Maven.MavenInstaller("3.5.0"))
 proplist.add(isp)
 
 mavenExtension.setInstallations(new MavenInstallation("Maven3", "", proplist))
