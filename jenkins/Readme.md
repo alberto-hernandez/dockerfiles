@@ -9,7 +9,7 @@ Docker image for Jenkins
 ```
 git clone git@github.com:alberto-hernandez/dockerfiles.git
 cd jenkins
-docker build -t itdev-rocks/jenkins .
+docker build -t residenttechy/jenkins .
 ```
 
 ## Run
@@ -17,7 +17,7 @@ docker build -t itdev-rocks/jenkins .
 You should run the docker container using 
 
 ```
-docker run -d -p 11103:8080 -v /var/data/jenkins:/var/jenkins_home -e ADMIN_USER=ahernandez -e ADMIN_PASS=temporal itdev-rocks/jenkins
+docker run -d -p 11103:8080 -v /var/data/jenkins:/var/jenkins_home -e ADMIN_USER=ahernandez -e ADMIN_PASS=temporal residenttechy/jenkins
 ```
 
 

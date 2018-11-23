@@ -1,0 +1,14 @@
+def env = System.getenv()
+def instance = Jenkins.getInstance()
+def descriptor = instance.getDescriptor("hudson.model.JDK")
+def installations = []
+def installer = new JDKInstaller("jdk-8u191-oth-JPR", true)
+def installerProps = new InstallSourceProperty([installer])
+def installation = new JDK("jdk-8u191", "", [installerProps])
+installations.push(installation)
+ 
+descriptor.setInstallations(installations.toArray(new JDK[0]))
+descriptor.save()
+ 
+def jdkInstaller = instance.getDescriptor("hudson.tools.JDKInstaller")
+jdkInstaller.doPostCredential(env.ORACLE_JDK_USER, env.ORACLE_JDK_PASSWORD)
